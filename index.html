@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jewel Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <link rel="stylesheet"  href="assets/css/style.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+    
+ 
+
+ <div class="bg">
+    <!-- <div class="container-fluid">
+            <div class="card text-center ">
+                    <div class="card-header">
+                      <h1>Crystal Collector</h1>
+                    </div>
+                   
+                  </div> -->
+
+    
+<div class="continer">
+    <div class="row">
+        <div class="col-md-2"></div>
+            <div clas="col-md-8">
+        <div class="jumbotron">
+            <h1>Crystal Collector</h1>
+            <hr>
+                
+            
+                <p>- You will be given a random number at the start of the game.</p>
+                <p>- There are fourr crystals below. By cicking on a crystal you will add a specific amount of points to your score.</p>
+                <p>- You win the game by matching your total score to random number, you lose the game if your score goes above the random number. </p>
+                <p>- The value of each crystal is hidden from you until you click on it. </p>
+                <p>- Each time when the game starts, the game will change the values of each crystal</p>
+
+                <div class="buttons">       
+                        <img class="image" id="image1" src="data:image/jpeg;base64,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">
+                        <img class="image" id="image2" src="http://shineyrocks.co.uk/ekmps/shops/amandapickstock/images/4mm-swarovski-elements-crystal-sand-opal-xilion-beads-50-x-crystals-for-jewellery-making-beadwork-and-craft-491-p.jpg">
+                        <img class="image" id="image3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUh45Sakh08k8XkPy91_j6Fb3ewANoma0K4L3tUOBwpo3MxVt7">
+                        <img class="image" id="image4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfpaUh9Ac1RS3IwhmPaH9loRqGwjDbpneo7NAAjKZgun9HLh0Og">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3" style="max-width: 12rem;">
+                            <div class="card-header">Random Number</div>
+                            <div class="card-body"></div>
+        
+                            </div>
+                        </div>       
+                          
+                        <div class="col-md-3">
+                            <div class="card text-white bg-info mb-3" style="max-width: 12rem;">
+                                    <div class="card-body1">
+                                        <div id="game">
+                                        <p>Wins: <span id= "wins"></span>  </p>
+                                        <p>Losses:<span id="losses"></span></p>
+                                    </div>
+                                      
+                                    </div>
+                                  </div>
+                        </div>
+
+                        <div class="col-md-3">
+                                  <div class="card text-white bg-success mb-3" style="max-width: 12rem;">
+                                        <div class="card-header">Good Luck</div>
+                                        <div class="card-body2">
+                                            <p>User Total:<span id= "total"></span></p>
+                                            
+                                        </div>
+                    
+                                        </div>
+                                    </div>
+                                    </div>    
+
+
+                         
+              </div>
+
+         </div>  
+         <div class="col-md-2"></div>    
+     </div>          
+</div>
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+</div>
+</body>
+</html>
